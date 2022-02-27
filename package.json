@@ -1,0 +1,41 @@
+{
+  "name": "ts-terminal",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "lint:fix": "npm run lint -- --fix",
+    "build": "npm run lint && rimraf dist/ && tsc && sass src/style.scss:dist/style.css",
+    "lint": "eslint src/**/*.ts",
+    "serve": "cd ./ && http-server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/heanfig/ts-terminal.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/heanfig/ts-terminal/issues"
+  },
+  "homepage": "https://github.com/heanfig/ts-terminal#readme",
+  "devDependencies": {
+    "@types/node": "^17.0.21",
+    "@typescript-eslint/eslint-plugin": "^5.12.1",
+    "@typescript-eslint/parser": "^5.12.1",
+    "eslint": "^8.10.0",
+    "eslint-config-prettier": "^8.4.0",
+    "eslint-plugin-prettier": "^4.0.0",
+    "nodemon": "^2.0.15",
+    "prettier": "^2.5.1",
+    "rimraf": "^3.0.2",
+    "typescript": "^4.5.5"
+  },
+  "dependencies": {
+    "@types/fast-levenshtein": "^0.0.2",
+    "fast-levenshtein": "^3.0.0",
+    "http-server": "^14.1.0",
+    "sass": "^1.49.9"
+  }
+}

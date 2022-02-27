@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <link rel="stylesheet" href="dist/style.css">
+  <script src="https://unpkg.com/fast-levenshtein@2.0.6/levenshtein.js"></script>
+</head>
+
+<body>
+  <div class="terminal">
+    <div class="terminal_header">
+      <div class="terminal_header-buttons">
+        <div class="terminal-button close"></div>
+        <div class="terminal-button minimize"></div>
+        <div class="terminal-button maximize"></div>
+      </div>
+      <div class="terminal_header-title">
+        herman@herman: /Desktop
+      </div>
+    </div>
+    <div class="terminal_body">
+      <div class="terminal-command">
+        <span class="terminal-heading">herman@herman</span>
+        <span class="terminal-path">/Desktop</span>
+        <span class="terminal-type">
+          <input type="text" id="type" value=" ">
+        </span>
+        <div class="terminal-out" id="out">
+          La propiedad "[PROP]" no existe<br>
+          quisiste decir "[SUGGEST]"
+        </div>
+      </div>
+    </div>
+  </div>
+  <script type="module" src="dist/index.js"></script>
+</body>
+
+</html>

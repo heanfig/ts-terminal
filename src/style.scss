@@ -1,0 +1,117 @@
+$radius-border-terminal: 5px;
+$header-terminal-padding: 5px;
+$body-terminal-padding: 3px;
+$header-terminal-buttons-size: 20px;
+
+body {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  background: #521a4c;
+  font-family: monospace;
+}
+.terminal {
+  $block: &;
+  position: relative;
+  display: grid;
+  background: blue;
+  margin: 3rem;
+  height: 100vh;
+  border-radius: 10px;
+  grid-template-columns: 1fr;
+  grid-template-rows: 35px;
+  &_header {
+    background-color: #3c3b36;
+    padding: $header-terminal-padding;
+    border-top-left-radius: $radius-border-terminal;
+    border-top-right-radius: $radius-border-terminal;
+    display: flex;
+    &-buttons {
+      justify-content: space-between;
+      align-items: center;
+      display: flex;
+      min-width: 70px;
+    }
+    &-title {
+      display: flex;
+      align-items: center;
+      color: #fff;
+      padding-left: 10px;
+      font-size: 1.5em;
+    }
+    #{$block}-button {
+      font-family: Arial, Helvetica, sans-serif;
+      position: relative;
+      border: 0.001em solid #000;
+      background: #686662;
+      border-radius: 50%;
+      width: $header-terminal-buttons-size;
+      height: $header-terminal-buttons-size;
+      &::before {
+        font-size: 0.8em;
+        position: absolute;
+        margin: auto;
+        top: 0;
+        right: 0;
+        left: 0;
+        bottom: 0;
+        width: $header-terminal-buttons-size / 2.2;
+        height: $header-terminal-buttons-size / 1.5;
+      }
+      &.close {
+        background: #b24319;
+        &::before {
+          content: "x";
+        }
+      }
+      &.minimize {
+        &::before {
+          content: "_";
+        }
+      }
+      &.maximize {
+        &::before {
+          content: "□";
+        }
+      }
+    }
+  }
+  &_body {
+    padding: $body-terminal-padding;
+    background-color: #27071e;
+  }
+  &-command {
+    font-size: 1.5em;
+    #{$block}-heading {
+      color: #669632;
+      &::after {
+        content: ":";
+        color: #fff;
+      }
+    }
+    #{$block}-path {
+      color: #4f627e;
+      &::after {
+        content: "$";
+        color: #fff;
+      }
+    }
+    #{$block}-type {
+      display: inline-block;
+      min-width: 120px;
+      color: #fff;
+      input {
+        outline: none;
+        font-size: inherit;
+        font-family: inherit;
+        border: none;
+        background-color: inherit;
+        color: #fff;
+      }
+    }
+    #{$block}-out {
+      display: none;
+      color: #fff;
+    }
+  }
+}
