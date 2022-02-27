@@ -46,14 +46,14 @@ class App {
 }
 
 new App({
-  violet: 'Violeta',
-  yellow: 'Amarillo',
-  blue: 'Azul',
-  golden: 'Dorado',
-  red: 'Rojo',
-  green: 'Verde',
-  brown: 'Cafe',
-  orange: 'Naranja',
-  coral: 'Coral',
-  olive: 'Oliva',
+  nombre: 'Herman Andres Figueroa',
+  experiencia: '8 años',
+  tecnologias: 'Angular, React, VanillaJs',
+  ubicacion: 'Caldas, Colombia',
+  educacion: 'SENA, Ingenieria de Sistemas',
+  expectativa: '1000 USD',
+  correo: 'heanfig@gmail.com',
+  telefono: '3137071964',
+  celular: '3137071964',
+  github: 'github.com/heanfig',
 });
