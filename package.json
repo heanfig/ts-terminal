@@ -7,7 +7,7 @@
     "lint:fix": "npm run lint -- --fix",
     "build": "npm run lint && rimraf dist/ && tsc && sass src/style.scss:dist/style.css",
     "lint": "eslint src/**/*.ts",
-    "serve": "cd ./ && http-server"
+    "start": "npm run build && cd ./ && http-server"
   },
   "repository": {
     "type": "git",
